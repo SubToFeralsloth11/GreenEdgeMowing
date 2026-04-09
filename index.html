@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenEdge Mowing</title>
+    <meta name="description" content="Reliable, high-quality lawn mowing from a motivated team of young entrepreneurs.">
+    <link rel="shortcut icon" href="profile%20pic.png" type="image/png">
+    <link rel="icon" type="image/png" href="profile%20pic.png">
+    <link rel="apple-touch-icon" href="profile%20pic.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="profile-badge" aria-label="GreenEdge Mowing profile image">
+        <img class="profile-badge-image" src="profile%20pic.png" alt="GreenEdge Mowing profile picture">
+    </div>
+
+    <div class="home-action-bar" aria-label="Quick actions">
+        <button class="action-chip action-chip-primary" type="button" data-open-order>Order now</button>
+        <button class="action-chip action-chip-secondary" type="button" data-open-order>Contact us</button>
+        <button class="action-chip action-chip-secondary" type="button" data-open-order>Need help?</button>
+        <a class="action-chip action-chip-secondary" href="about.html">About the creators</a>
+    </div>
+
+    <div class="page-shell">
+        <header class="hero">
+            <nav class="topbar" aria-label="Primary">
+                <div class="brand-lockup">
+                    <span class="brand-mark" aria-hidden="true"></span>
+                    <div>
+                        <h1>Green Edge Mowing</h1>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="hero-grid">
+                <section class="hero-copy">
+                    <p class="hero-lead">Sharp lawns. Honest work. Local teenagers building something real.</p>
+                    <p class="hero-description">We provide reliable lawn mowing, clear communication, and neat results you can count on.</p>
+                </section>
+            </div>
+        </header>
+
+        <main>
+            <section class="section services-section" aria-labelledby="services-title">
+                <div class="services-heading">
+                    <h2 id="services-title">Simple, reliable lawn mowing.</h2>
+                </div>
+                <div class="service-grid">
+                    <article class="info-card">
+                        <h3>Reliable service</h3>
+                        <p>We show up on time, mow carefully, and leave a clean finish.</p>
+                    </article>
+                    <article class="info-card">
+                        <h3>Young entrepreneurs</h3>
+                        <p>Each job helps us build real business skills through honest work.</p>
+                    </article>
+                    <article class="info-card">
+                        <h3>Simple ordering</h3>
+                        <p>Pick a lawn size, get an instant quote, and send your details by email.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section cta-panel" aria-labelledby="cta-title">
+                <div>
+                    <p class="section-kicker">Ready to book</p>
+                    <h2 id="cta-title">Order now, choose your lawn size, and send your quote request.</h2>
+                    <p>Accept the terms, choose your lawn size, and fill in your address and extra job details.</p>
+                    <div class="social-links" aria-label="GreenEdge Mowing social links">
+                        <a class="social-link" href="https://www.instagram.com/green.edge.mowing?utm_source=qr&igsh=MTg2eWR0am16MGN1eg==" target="_blank" rel="noreferrer">Instagram</a>
+                        <a class="social-link" href="https://m.youtube.com/channel/UCPM4l7gNKRp9oVhdpHS_X2w" target="_blank" rel="noreferrer">YouTube</a>
+                        <button class="social-link social-link-button" type="button" data-open-order>Contact for more information</button>
+                    </div>
+                </div>
+                <button class="button button-solid cta-order-button" type="button" data-open-order>Order now!</button>
+            </section>
+
+            <section class="section showcase-section showcase-section-bottom" aria-label="Showcase media">
+                <div class="showcase-stage showcase-stage-double">
+                    <article class="showcase-feature showcase-feature-dual">
+                        <div class="showcase-media-frame showcase-media-frame-compact">
+                            <img class="showcase-media-image" data-showcase-image src="AD's/GreenEdge%20Mowing.png" alt="Featured GreenEdge Mowing promotion" hidden>
+                            <video class="showcase-media-video" data-showcase-video autoplay muted loop playsinline preload="metadata" controls hidden></video>
+                        </div>
+                    </article>
+                    <article class="showcase-feature showcase-feature-dual">
+                        <div class="showcase-media-frame showcase-media-frame-compact">
+                            <img class="showcase-media-image" data-showcase-image src="AD's/Untitled%20design.png" alt="Featured GreenEdge Mowing promotion" hidden>
+                            <video class="showcase-media-video" data-showcase-video autoplay muted loop playsinline preload="metadata" controls hidden></video>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="modal" id="order-modal" hidden>
+        <div class="modal-backdrop" data-close-order></div>
+        <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal-close" type="button" aria-label="Close order dialog" data-close-order>&times;</button>
+
+            <div class="modal-step is-active" data-step="confirm">
+                <div class="agreement-screen">
+                    <p class="modal-tag">Order request</p>
+                    <h2 id="modal-title">Read this before continuing with your order request.</h2>
+                    <p class="liability-copy">If a member or worker damages, breaks, or causes loss to any property, responsibility for the associated costs will be assessed based on the situation. Our organisation is not liable for damage caused by individuals, and we will not cover repair or replacement expense.</p>
+                    <p>Cancel closes this window. Agree opens the pricing page where you choose a lawn size and continue to the quote form.</p>
+                </div>
+                <div class="modal-actions">
+                    <button class="button button-ghost" type="button" data-close-order>Cancel</button>
+                    <a class="button button-solid" href="pricing.html">Agree</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <aside class="promo-float" id="promo-float" hidden aria-live="polite" aria-label="Occasional site promo">
+        <button class="promo-close" type="button" id="promo-close" aria-label="Close promo">&times;</button>
+        <div class="promo-media-wrap">
+            <video class="promo-media" id="promo-video" muted playsinline preload="auto"></video>
+        </div>
+        <div class="promo-copy">
+            <p class="card-label">Quick promo</p>
+            <div class="promo-links" aria-label="Promo social links">
+                <a class="social-link" href="https://www.instagram.com/green.edge.mowing?utm_source=qr&igsh=MTg2eWR0am16MGN1eg==" target="_blank" rel="noreferrer">Instagram</a>
+                <a class="social-link" href="https://m.youtube.com/channel/UCPM4l7gNKRp9oVhdpHS_X2w" target="_blank" rel="noreferrer">YouTube</a>
+                    <button class="social-link social-link-button promo-contact-button" type="button" data-open-order>Contact for more information</button>
+            </div>
+        </div>
+    </aside>
+</body>
+</html>

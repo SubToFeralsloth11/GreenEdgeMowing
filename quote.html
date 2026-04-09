@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenEdge Mowing Quote</title>
+    <meta name="description" content="Enter your lawn size, address, and extra details to generate a GreenEdge Mowing quote email.">
+    <link rel="shortcut icon" href="profile%20pic.png" type="image/png">
+    <link rel="icon" type="image/png" href="profile%20pic.png">
+    <link rel="apple-touch-icon" href="profile%20pic.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="quote.js" defer></script>
+</head>
+<body class="quote-page-body">
+    <div class="quote-page-shell">
+        <header class="quote-page-header">
+            <div class="quote-page-topbar">
+                <div class="quote-page-brand">
+                    <span class="brand-mark" aria-hidden="true"></span>
+                    <strong>GreenEdge Mowing</strong>
+                </div>
+                <a class="button button-ghost" href="pricing.html">Back to pricing</a>
+            </div>
+
+            <section class="quote-hero-card">
+                <p class="quote-page-eyebrow">Quote form</p>
+                <h1 class="quote-page-title">Enter your lawn details and send the quote request.</h1>
+                <p class="quote-page-intro">Write the exact lawn size in square meters, add your address, access notes, and any extra information. The page calculates the current standard price before opening your email app.</p>
+            </section>
+        </header>
+
+        <main class="quote-layout">
+            <section class="quote-form-card">
+                <p class="quote-selected-tier" id="selected-tier-label">Selected range: loading</p>
+                <form class="quote-form" id="quote-form">
+                    <div class="quote-field">
+                        <label for="lawn-size">Lawn size in square meters (m²)</label>
+                        <input id="lawn-size" name="lawn-size" type="number" min="1" step="1" inputmode="numeric" placeholder="Example: 185" required>
+                        <p class="quote-field-hint">The live price updates as soon as you enter the size.</p>
+                    </div>
+
+                    <div class="quote-field">
+                        <label for="full-address">Full property address</label>
+                        <textarea id="full-address" name="full-address" placeholder="Street number, street name, suburb, postcode" required></textarea>
+                    </div>
+
+                    <div class="quote-field">
+                        <label for="access-notes">Access notes</label>
+                        <textarea id="access-notes" name="access-notes" placeholder="Gate code, side access, preferred entry point, pets, or timing notes"></textarea>
+                    </div>
+
+                    <div class="quote-field">
+                        <label for="extra-info">Extra info</label>
+                        <textarea id="extra-info" name="extra-info" placeholder="Anything else we should know before arriving"></textarea>
+                    </div>
+
+                    <div class="quote-actions">
+                        <button class="button button-solid" type="submit">Send quote email</button>
+                        <a class="button button-ghost" href="pricing.html">Choose a different lawn size</a>
+                        <a class="button button-ghost" id="custom-quote-link" href="quote.html?tier=custom" hidden>Switch to custom quote</a>
+                    </div>
+                    <p class="quote-message" id="quote-message" aria-live="polite"></p>
+                    <p class="quote-email-fallback" id="quote-email-fallback" hidden>If your email app does not open, use <a href="mailto:greenedgemowing00@gmail.com" id="quote-email-link">this email link</a> or contact <strong>greenedgemowing00@gmail.com</strong>.</p>
+                </form>
+            </section>
+
+            <aside class="quote-summary-card" aria-live="polite">
+                <p class="quote-summary-label">Instant quote</p>
+                <p class="quote-status" id="quote-status">Waiting for lawn size</p>
+                <p class="quote-price" id="quote-price">$0</p>
+                <p class="quote-price-note" id="quote-price-note">Enter the lawn size to calculate the price.</p>
+                <p class="quote-summary-copy">Your email will include:</p>
+                <ul class="quote-summary-list">
+                    <li>The lawn size in square meters</li>
+                    <li>The calculated lawn category</li>
+                    <li>The standard price or custom quote note</li>
+                    <li>Your full address</li>
+                    <li>Access notes</li>
+                    <li>Extra info</li>
+                </ul>
+                <p class="quote-help">If your lawn is larger than 450 m², the page will mark it as a custom quote request so you can still send the details.</p>
+            </aside>
+        </main>
+    </div>
+</body>
+</html>
